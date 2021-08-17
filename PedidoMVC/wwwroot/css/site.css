@@ -1,0 +1,126 @@
+﻿:root {
+    --primary-color: #4C5C7A;
+    --title-color: #A16B4D;
+    --btn-color: #85A156;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-color);
+}
+
+.pb {
+    padding-bottom: 40px;
+}
+
+nav {
+    background-color: var(--primary-color);
+    height: 88px;
+}
+
+nav .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .pedido {
+    background-color: var(--btn-color);
+    color: white;
+    font-weight: bold;
+}
+
+
+/* buttons */
+
+nav .pedido:hover,
+#page-home .content a:hover,
+#page-pedido a:hover {
+    background-color: var(--title-color);
+}
+
+#burguer {
+    margin-right: 5px;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/burguer.svg);
+    background-size: contain;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    color: var(--title-color);
+}
+
+
+/* page-home */
+
+#page-home h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 8rem;
+}
+
+#page-home h1,
+#page-home h5 {
+    margin: 5px 0;
+}
+
+#page-home .content {
+    margin-top: 20vh;
+}
+
+#page-home .content a {
+    background-color: var(--btn-color);
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+    margin: 24px auto;
+    transition: all .2s ease-out;
+    font-size: 24px;
+}
+
+#page-home .content a #cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/supermercado.svg);
+    background-size: contain;
+    margin-right: 10px;
+}
+
+#page-home {
+    background: url(../images/lanchonete.svg) no-repeat;
+    background-position: left top;
+    background-size: contain;
+}
+
+
+/* pedidos page */
+
+#page-pedido form {
+    margin: 24px 0;
+}
+
+#page-pedido form input {
+    text-align: center;
+}
+
+#page-pedido td,
+#page-total td {
+    text-align: center;
+}
+
+#page-pedido a {
+    background-color: var(--btn-color);
+}

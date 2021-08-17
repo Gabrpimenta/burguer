@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Pedido Finalizado";
+}
+@model List<PedidoMVC.Models.ItemPedido>
+
+    <div class="center-align" id="page-total">
+        <h1>Seu pedido final</h1>
+        @if (Model != null) {
+            int i = 1;
+            <table>
+                <tr>
+                    <td>#</td>
+                    <td>Descrição</td>
+                    <td>Quantidade</td>
+                    <td>Valor unitario</td>
+                    <td>Sub Total</td>
+                </tr>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>@i</td>
+                        <td>@item.Nome</td>
+                        <td>@item.Quantidade</td>
+                        <td>@item.Preco</td>
+                        <td>@item.SubTotal()</td>
+                    </tr>
+                    i++;
+                }
+                <tr>
+                    <td>Total:</td>
+                    <td class="red" style="color:white;">@ViewBag.Total</td>
+                </tr>
+            </table>
+        }
+    </div>
